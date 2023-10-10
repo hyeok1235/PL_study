@@ -1,0 +1,11 @@
+> val x1=(val x2=3 in 5 − x3) in 1 + x4
+1. x3 -> x2, x4 -> x1
+2. No shadowing
+
+>val x1=3 in val y=5 in 1 + x2
+1. x2 -> x1
+2. No shadowing
+
+val x1=3 in val x2=5 in 1 + x3
+1. x3 -> x2
+2. x2 shadows x1
