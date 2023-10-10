@@ -1,0 +1,22 @@
+<expr> ::= <num>
+	| | "{" "+" <expr> <expr> "}" 
+	| "{" "*" <expr> <expr> "}"
+	|    "{"    "let"    "{"    <id>    <expr>    "}"    <expr>    "}" 
+	|    <id>
+
+1. {let {x 5} {+ 8 {* x 2 3}}}
+{* x 2 3} part has no corresponding rule.
+Not a expr
+2. {with {x 0} {with {x 7}}}
+There is no rule to explain the stinrg "with".
+Not a expr
+3. {let {3 5} {+ 8 {- x 2}}}
+In let {3 5}, the 3 is place for id which noly allows latin alphabets.
+Not a expr
+4. {let {3 y} {+ 8 {* x 2}}}
+In let {3 y}, the 3 is place for id which noly allows latin alphabets.
+Not a expr
+5. {let {x y} {+ 8 {* x 2}}}
+It is a expr.
+First use rule 4. {x y} each matches to <id> and <expr>
+Use rule 3 and then rule 2 to interpret {+ 8 {* x 2}}. 

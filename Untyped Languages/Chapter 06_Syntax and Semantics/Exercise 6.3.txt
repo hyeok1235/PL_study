@@ -1,0 +1,18 @@
+1. caramel latte macchiato
+Not a <coffee>
+
+2. (espresso)
+It is a <coffee>
+
+3. (steamed-milk) on ((caramel) on (milk-foam) on (espresso))))
+It is a <coffee>
+
+4. (chocolate-syrup) on ((cocoa-powder) on ((cinnamon) on ((milk-foam) on ((steamed-milk) on (espresso)))))
+It is a <coffee>
+
+5. steamed-milk on espresso on chocolate-syrup
+Not a <coffee>
+There is <flavor> can't come after <coffee>
+
+6. (cocoa-powder) on ((milk-foam) on ((steamed-milk) on (espresso)))
+It is a <coffee>

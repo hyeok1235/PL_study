@@ -1,0 +1,33 @@
+<ice-cream> ::= "sprinkles" "on" <ice-cream>
+	| "cherry" "on" <ice-cream>
+	| "scoop" "of" <flavor> "on" <ice-cream> 
+	| "sugar-cone"
+	| "waffle-cone"
+<flavor> ::= "vanilla"
+	| "lettuce"
+
+
+1. sprinkles
+No corresponding rule.
+Not a <ice-cream>.
+
+2. sugar-cone
+Rule 4 of <ice-cream>
+
+3. vanilla
+Not a <ice-cream> but a <flavor>.
+
+4. scoop of (vanilla) on (waffle-cone)
+It is a <ice-cream>
+First use rule 3 of <ice-cream>. Then use rule 1 of <flavor> and rule 5 of <ice-cream>.
+
+5. sprinkles on lettuce on waffle-cone
+Not a <ice-cream>. "lettuce on waffle-cone" has no corresponding rule.
+
+6. scoop of (vanill)a on (sprinkles on (waffle-cone))
+It is a <ice-cream>.
+Use rule 3 of <ice-cream>. Then use rule 1 of <flavor>. Then use rule 1 of <ice-cream> and rule 5 of <ice-cream>.
+
+7. cherry on (scoop of (lettuce) on (scoop of vanilla on sugar-cone))
+It is a <ice-cream>.
+
