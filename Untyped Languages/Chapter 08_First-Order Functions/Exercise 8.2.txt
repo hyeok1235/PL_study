@@ -1,0 +1,15 @@
+def twice(x) = x + x
+def x(y) = y
+def f(x) = x + 1
+def g(g) = g
+
+1. twice(twice)
+Free identifier error
+2. val x = 5 in x(x)
+5
+3. g(3)
+3
+4. g(f)
+Free identifier error
+5. g(g)
+Free identifier error
